@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<h:html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+	<h:head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Exercício 1 - JSF</title>
+		<link rel="stylesheet" type="text/css" href="resources\css\estilo.css" />
+	</h:head>
+	<h:body>
+		
+		<h:form>
+		
+			<table>
+			<tr><th colspan='2'>Digite dois textos abaixo</th></tr>
+				<tr>
+					<td>Campo1:</td>
+					<td>
+						<h:inputText value="${inversaoBean.inversao.campo1}">
+						</h:inputText>
+					</td>
+				</tr>
+				<tr>
+					<td>Campo2:</td>
+					<td>
+						<h:inputText value="${inversaoBean.inversao.campo2}">
+						</h:inputText>
+					</td>
+				</tr>
+				<tr>
+				<td colspan='2' align="center">
+					<img src='resources/invert.png'></img>
+					<h:commandButton id="inverter" 
+						action="#{inversaoBean.inverter}" 
+						value="Inverter"/></td>
+				</tr>	
+			</table>
+			
+		</h:form>
+	</h:body>
+</h:html>
