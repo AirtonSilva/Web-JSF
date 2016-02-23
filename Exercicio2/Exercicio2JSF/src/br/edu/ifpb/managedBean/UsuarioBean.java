@@ -15,14 +15,14 @@ public class UsuarioBean {
 	private Usuario usuario;
 	private UsuarioDAO usuarioDao;
 	private ArrayList<Usuario> usuarios;
-	private String auxiliar;
+	private Usuario listar;
+	private String nome;
 
 	public UsuarioBean() {
 	
 		this.usuario = new Usuario();
 		this.usuarioDao = new UsuarioDAO();
 		this.usuarios = new ArrayList<Usuario>();
-		this.auxiliar = " ";
 	}
 		
 	public Usuario getUsuario() {
@@ -46,19 +46,28 @@ public class UsuarioBean {
 		this.usuarios = usuarios;
 	}
 
+	//public String listar(){
+		
+		//usuarios = usuarioDao.consultaUser();
+		
+	//	return "exibirUsuarios.xhtml";
+	//}
 	public String listar(){
+		listar.setNome(nome);
 		
-		usuarios = usuarioDao.consultaUser();
+		System.out.println(listar.getNome());
 		
-		return "exibirUsuarios.xhtml";
+		return null;		
 	}
 	
-	public String getAuxiliar() {
-		return auxiliar;
+	public Usuario getListar() {
+		return listar;
 	}
 
-	public void setAuxiliar(String auxiliar) {
-		this.auxiliar = auxiliar;
+	public void setListar(Usuario listar) {
+		this.listar = listar;
 	}
 
+
+	
 }

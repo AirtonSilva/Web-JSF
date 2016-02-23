@@ -10,14 +10,19 @@
 		<link rel="stylesheet" type="text/css" href="resources\css\estilo.css" />
 	</h:head>
 	<h:body>
+		<h1>Cadastro de Usuário</h1>
 		
 		<h:form>
-			<h:inputText value="${usuarioBean.auxiliar}">
+			
+			<h:outputLabel value='Nome:'></h:outputLabel>
+			<h:inputText lable='Nome' value="${usuarioBean.usuario.nome}" required='true'
+			requiredMessage='O campo Nome é obrigatório!'>
 			</h:inputText>
+			
 			<h:commandButton id="listar" 
 				action="${usuarioBean.listar}" 
-				value="Listar Usuários do Banco"/>
+				value="Listar teste"/>
 		</h:form>
-		
+		<h:messages errorStyle='color: red'/>
 	</h:body>
 </h:html>
